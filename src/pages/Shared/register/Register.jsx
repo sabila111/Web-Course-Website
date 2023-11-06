@@ -47,7 +47,11 @@ const Register = () => {
     }
 
     return (
-        <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100 ml-80">
+       <div>
+
+         <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/99rMwLH/wave-blue-background-wallpaper-free-vector.jpg)' }}>
+
+         <div className="card flex-shrink-0 w-full max-w-lg mb-20">
             <form onSubmit={handleRegister} className="card-body">
                 <div className="form-control">
                     <label className="label">
@@ -76,7 +80,7 @@ const Register = () => {
 
                 </div>
                 <div className="form-control mt-6">
-                    <button className="py-3 px-5 rounded-lg text-pink-400 font-bold outline-pink-300 outline-none">Register</button>
+                    <button className="py-3 px-5 rounded-lg bg-blue-900 text-white font-bold ">Register</button>
                 </div>
             </form>
             {
@@ -86,10 +90,13 @@ const Register = () => {
                 success && <p className="text-lime-600 text-center">{success}</p>
             }
 
-            <p className="text-center mt-4">Already have an account? Please <Link className="text-pink-400 font-bold" to={'/login'}>Login</Link></p>
+            <p className="text-center mt-4">Already have an account? Please <Link className="text-blue-900 font-bold" to={'/login'}>Login</Link></p>
 
-            <ToastContainer></ToastContainer>
+            
         </div>
+         </div>
+         <ToastContainer></ToastContainer>
+       </div>
     );
 };
 

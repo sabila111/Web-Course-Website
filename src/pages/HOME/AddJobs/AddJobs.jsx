@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Shared/provider/AuthProvider";
+import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 const AddJobs = () => {
 
@@ -16,20 +18,41 @@ const AddJobs = () => {
         const category= form.category.value;
         const description= form.description.value;
 
-        const course ={title,email,min_price,max_price,deadline,category,description}
-        console.log(course)
+        const job ={title,email,min_price,max_price,deadline,category,description}
+        console.log(job)
+
+        // send data to the server 
+        fetch('http://localhost:5000/jobs',{
+            method:'POST',
+        headers:{
+            'content-type' : 'application/json'
+        },
+        body:JSON.stringify(job)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success',
+                    text: 'Added job successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+            }
+        })
 
     }
 
     return (
-        <div className="bg-red-200 p-24">
-        <h2 className="text-3xl font-extrabold mb-4">Add Product</h2>
+        <div className="p-32">
+        <h2 className="text-3xl text-blue-900 font-extrabold text-center mb-6">Add Your Job</h2>
         <form onSubmit={handleAddProduct}>
             {/* form row 1 */}
             <div className="md:flex mb-6">
                 <div className="form-control md:w-1/2">
                     <label className="label">
-                        <span className="label-text">Job Title</span>
+                        <span className="label-text text-xl font-medium">Job Title</span>
                     </label>
                     <label className="input-group">
                         <input type="text" name="title" placeholder="job title" className="input input-bordered w-full" />
@@ -38,7 +61,7 @@ const AddJobs = () => {
                 
                 <div className="form-control md:w-1/2 ml-4">
                     <label className="label">
-                        <span className="label-text"> Email</span>
+                        <span className="label-text text-xl font-medium"> Email</span>
                     </label>
                     <label className="input-group">
                         <input type="email" name="email" placeholder="email" defaultValue={user?.email} className="input input-bordered w-full" />
@@ -51,7 +74,7 @@ const AddJobs = () => {
             <div className="md:flex mb-6">
                 <div className="form-control md:w-1/2">
                     <label className="label">
-                        <span className="label-text"> Minimum Price</span>
+                        <span className="label-text text-xl font-medium"> Minimum Price</span>
                     </label>
                     <label className="input-group">
                         <input type="text" name="minPrice" placeholder="min-price" className="input input-bordered w-full" />
@@ -60,7 +83,7 @@ const AddJobs = () => {
                 
                 <div className="form-control md:w-1/2 ml-4">
                     <label className="label">
-                        <span className="label-text"> Maximum price</span>
+                        <span className="label-text text-xl font-medium"> Maximum price</span>
                     </label>
                     <label className="input-group">
                         <input type="text" name="maxPrice" placeholder="max-price" className="input input-bordered w-full" />
@@ -73,7 +96,7 @@ const AddJobs = () => {
             <div className="md:flex mb-6">
                 <div className="form-control md:w-1/2">
                     <label className="label">
-                        <span className="label-text">Deadline</span>
+                        <span className="label-text text-xl font-medium">Deadline</span>
                     </label>
                     <label className="input-group">
                         <input type="date" name="deadline"  className="input input-bordered w-full" />
@@ -82,7 +105,7 @@ const AddJobs = () => {
                 
                 <div className="form-control md:w-1/2 ml-4">
                     <label className="label">
-                        <span className="label-text">Category</span>
+                        <span className="label-text text-xl font-medium">Category</span>
                     </label>
                     <label className="input-group">
                         <select name="category" className="input input-bordered w-full">
@@ -95,15 +118,18 @@ const AddJobs = () => {
 
                 
             </div>
-            <div className="form-control md:w-1/2 ml-4">
+            <div className="form-control md:w-1/2 ">
                     <label className="label">
-                        <span className="label-text">Short Description</span>
+                        <span className="label-text text-xl font-medium">Short Description</span>
                     </label>
                     <label className="input-group">
                         <input type="text" name="description" placeholder="description" className="input input-bordered w-full" />
                     </label>
                 </div>
-         <input type="submit" value="Add Button" className="btn btn-block mt-6"/>
+         {/* <Link  to={'/posted'}>
+         <input type="submit" value="Add Button" className=" py-3 px-4 rounded-lg btn-block bg-blue-900 text-white font-bold mt-6"/>
+         </Link> */}
+         <input type="submit" value="Add Button" className=" py-3 px-4 rounded-lg btn-block bg-blue-900 text-white font-bold mt-6"/>
         </form>
     </div>
     );

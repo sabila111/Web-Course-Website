@@ -31,7 +31,7 @@ const Navbar = () => {
                         {navLink}
                     </ul>
                 </div>
-                <h2 className="font-bold text-xl "><span className="text-blue-800 text-5xl">E</span>learning</h2>
+                <h2 className="font-bold text-xl "><span className="text-blue-800 text-5xl">Web</span>Mart</h2>
                 
             </div>
             <div className="navbar-center hidden lg:flex">

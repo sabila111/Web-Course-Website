@@ -1,0 +1,110 @@
+[
+    {
+        "email": "sabila@example.com",
+        "jobTitle": "Front-end Developer",
+        "deadline": "2023-12-31",
+        "description": "We're looking for a talented front-end developer to create responsive and engaging web interfaces. Join our team and help us deliver outstanding user experiences.",
+        "category": "Web Development",
+        "minPrice": 50000,
+        "maxPrice": 80000
+    },
+    {
+        "email": "sabila@example.com",
+        "jobTitle": "Back-end Developer",
+        "deadline": "2023-12-15",
+        "description": "We're hiring a back-end developer to manage server-side technologies and ensure data handling and server performance. Be part of a dynamic team and make a significant impact on our web projects.",
+        "category": "Web Development",
+        "minPrice": 55000,
+        "maxPrice": 85000
+    },
+    {
+        "email": "sabila@example.com",
+        "jobTitle": "Full Stack Developer",
+        "deadline": "2023-12-31",
+        "description": "Join us as a full stack developer and work on a variety of web projects. Your role will encompass both front-end and back-end development, ensuring the end-to-end functionality of our web applications.",
+        "category": "Web Development",
+        "minPrice": 60000,
+        "maxPrice": 90000
+    },
+    {
+        "email": "sabila@example.com",
+        "jobTitle": "UI/UX Designer",
+        "deadline": "2024-01-15",
+        "description": "We are seeking a UI/UX designer with a passion for creating user-friendly and visually appealing interfaces. Your creative skills will help shape our web projects and enhance the user experience.",
+        "category": "Web Development",
+        "minPrice": 45000,
+        "maxPrice": 70000
+    },
+    {
+        "email": "sabila@example.com",
+        "jobTitle": "Social Media Manager",
+        "deadline": "2023-11-30",
+        "description": "Experienced social media manager to lead online marketing efforts.",
+        "category": "Digital Marketing",
+        "minPrice": 40000,
+        "maxPrice": 65000
+    },
+    {
+        "email": "sabila@example.com",
+        "jobTitle": "Content Marketing Manager",
+        "deadline": "2023-12-31",
+        "description": "Join us as a content marketing manager to produce compelling online content.",
+        "category": "Digital Marketing",
+        "minPrice": 50000,
+        "maxPrice": 75000
+    },
+    {
+        "email": "sabila@example.com",
+        "jobTitle": "Email Marketing Specialist",
+        "deadline": "2024-01-15",
+        "description": "We're seeking an email marketing specialist to improve our email marketing efforts.",
+        "category": "Digital Marketing",
+        "minPrice": 35000,
+        "maxPrice": 60000
+    },
+    {
+        "email": "sabila@example.com",
+        "jobTitle": "SEO Specialist",
+        "deadline": "2023-12-15",
+        "description": "Looking for an SEO specialist to optimize our website for search engines.",
+        "category": "Digital Marketing",
+        "minPrice": 45000,
+        "maxPrice": 70000
+    },
+    {
+        "email": "sabila@example.com",
+        "jobTitle": "Graphic Designer",
+        "deadline": "2023-11-30",
+        "description": "Talented graphic designer to create visually appealing designs.",
+        "category": "Graphics Design",
+        "minPrice": 40000,
+        "maxPrice": 65000
+    },
+    {
+        "email": "sabila@example.com",
+        "jobTitle": "UI Designer",
+        "deadline": "2023-12-31",
+        "description": "Join our team as a UI designer to design intuitive user interfaces.",
+        "category": "Graphics Design",
+        "minPrice": 45000,
+        "maxPrice": 70000
+    },
+    {
+        "email": "sabila@example.com",
+        "jobTitle": "Illustrator",
+        "deadline": "2023-12-15",
+        "description": "Illustrator with a passion for creating unique illustrations.",
+        "category": "Graphics Design",
+        "minPrice": 35000,
+        "maxPrice": 60000
+    },
+    {
+        "email": "sabila@example.com",
+        "jobTitle": "Motion Graphics Artist",
+        "deadline": "2024-01-15",
+        "description": "Motion graphics artist to create visually stunning animations.",
+        "category": "Graphics Design",
+        "minPrice": 50000,
+        "maxPrice": 75000
+    }
+]

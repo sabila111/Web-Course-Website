@@ -10,15 +10,15 @@ const AddJobs = () => {
     const handleAddProduct = e =>{
         e.preventDefault()
         const form = e.target
-        const title = form.title.value;
+        const jobTitle = form.jobTitle.value;
         const email = user?.email;
-        const min_price = form.minPrice.value;
-        const max_price = form.maxPrice.value;
+        const minPrice = form.minPrice.value;
+        const maxPrice = form.maxPrice.value;
         const deadline= form.deadline.value;
         const category= form.category.value;
         const description= form.description.value;
 
-        const job ={title,email,min_price,max_price,deadline,category,description}
+        const job ={jobTitle,email,minPrice,maxPrice,deadline,category,description}
         console.log(job)
 
         // send data to the server 
@@ -55,7 +55,7 @@ const AddJobs = () => {
                         <span className="label-text text-xl font-medium">Job Title</span>
                     </label>
                     <label className="input-group">
-                        <input type="text" name="title" placeholder="job title" className="input input-bordered w-full" />
+                        <input type="text" name="jobTitle" placeholder="job title" className="input input-bordered w-full" />
                     </label>
                 </div>
                 

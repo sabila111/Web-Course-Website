@@ -14,10 +14,11 @@ const Register = () => {
     const handleRegister = e =>{
         e.preventDefault();
         const form = e.target;
+        const name = form.name.value
         const email =form.email.value;
         const password = form.password.value;
         const photo = form.photo.value;
-        console.log(email,password,photo)
+        console.log(email,password,photo,name)
 
         setRegisterError('')
         setSuccess('')

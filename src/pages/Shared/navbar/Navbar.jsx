@@ -59,7 +59,7 @@ const Navbar = () => {
                                     <p className="mt-3 ">{user.email}</p>
                                     <img src={user.photo} alt="" />
                                 </div>
-                                <button onClick={handleSignOut} className="py-3 px-5 text-white font-medium rounded-lg bg-blue-900">Sign Out</button>
+                                <button onClick={handleSignOut} className="py-3 px-5 text-white font-medium rounded-lg bg-blue-900">Log Out</button>
                             </div>
                         )
 

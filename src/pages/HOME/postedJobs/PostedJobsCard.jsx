@@ -40,7 +40,7 @@ const PostedJobsCard = ({job}) => {
     return (
         <div className="card w-96 bg-blue-100 shadow-xl my-3">
   <div className="card-body">
-    
+    <p>{email}</p>
     <h2 className="card-title font-bold text-3xl ">{jobTitle}</h2>
     <p className="font-semibold text-xl">{category}</p>
     

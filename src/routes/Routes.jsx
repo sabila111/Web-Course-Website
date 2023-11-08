@@ -11,6 +11,7 @@ import Footer from "../pages/Shared/footer/Footer";
 import MyBids from "../pages/HOME/bids/MyBids";
 import UpdateJobs from "../pages/HOME/postedJobs/UpdateJobs";
 import PrivateRoute from "../pages/Shared/privateRoute/PrivateRoute";
+import HomeTabs from "../pages/HOME/home/HomeTabs";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
         {
           path: "/footer",
           element:<Footer></Footer>,
+        },
+        {
+          path: "/homeTabs/:category",
+          element:<HomeTabs></HomeTabs>,
+          loader:({params})=> fetch(`http://localhost:5000/jobs/${params.category}}`)
         },
         {
           path: "/add",

@@ -9,9 +9,11 @@ import AddJobs from "../pages/HOME/AddJobs/AddJobs";
 import PostedJobs from "../pages/HOME/postedJobs/PostedJobs";
 import Footer from "../pages/Shared/footer/Footer";
 import MyBids from "../pages/HOME/bids/MyBids";
-import UpdateJobs from "../pages/HOME/postedJobs/UpdateJobs";
+
 import PrivateRoute from "../pages/Shared/privateRoute/PrivateRoute";
 import HomeTabs from "../pages/HOME/home/HomeTabs";
+import JobDetail from "../pages/HOME/home/jobDetail/JobDetail";
+import Update2 from "../pages/HOME/postedJobs/Update2";
 
 const router = createBrowserRouter([
     {
@@ -49,9 +51,19 @@ const router = createBrowserRouter([
           element:<PrivateRoute><PostedJobs></PostedJobs></PrivateRoute>,
           loader:()=> fetch('http://localhost:5000/jobs')
         },
+        // {
+        //   path: "/update/:id",
+        //   element:<UpdateJobs></UpdateJobs>,
+        //   loader:({params})=> fetch(`http://localhost:5000/jobs/${params.id}`)
+        // },
         {
-          path: "/update/:id",
-          element:<UpdateJobs></UpdateJobs>,
+          path: "/update2/:id",
+          element:<Update2></Update2>,
+          loader:({params})=> fetch(`http://localhost:5000/jobs/${params.id}`)
+        },
+        {
+          path: "/jobDetail/:id",
+          element:<JobDetail></JobDetail>,
           loader:({params})=> fetch(`http://localhost:5000/jobs/${params.id}`)
         },
         {

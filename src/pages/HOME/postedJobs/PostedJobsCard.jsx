@@ -51,7 +51,7 @@ const PostedJobsCard = ({job}) => {
    <p><span className="font-medium text-lg">Deadline:</span> {deadline}</p>
    <p><span className="font-medium text-lg">Description:</span> {description}</p>
     <div className="card-actions flex justify-between">
-      <Link to={`/update/${_id}`}>
+      <Link to={`/update2/${_id}`}>
       <button className="bg-blue-900 py-3 px-4 rounded-lg text-white font-bold ">Update</button>
       </Link>
       <button onClick={()=> handleDelet(_id)} className="py-3 px-4 rounded-lg outline-4 border-2 border-blue-900  font-bold  bg-white">Delete</button>

@@ -1,9 +1,13 @@
 import { useContext } from "react";
+import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 import { AuthContext } from "../../Shared/provider/AuthProvider";
-import { Link } from "react-router-dom";
-import Swal from 'sweetalert2'
 
-const AddJobs = () => {
+
+const Update2 = () => {
+    
+    const job = useLoaderData()
+    const {_id,jobTitle,email,minPrice,maxPrice,deadline,category,description}= job
 
     const {user} = useContext(AuthContext)
 
@@ -44,10 +48,14 @@ const AddJobs = () => {
 
     }
 
+
+
     return (
-        <div className="p-32">
-            
-        <h2 className="text-3xl text-blue-900 font-extrabold text-center mb-6">Add Your Job</h2>
+        <div className="mt-40">
+            <h2>update jobs :{email}</h2>
+
+            <div className="">
+        <h2 className="text-3xl text-blue-900 font-extrabold text-center mb-6">Update Your Job</h2>
         <form onSubmit={handleAddProduct}>
             {/* form row 1 */}
             <div className="md:flex mb-6">
@@ -56,7 +64,7 @@ const AddJobs = () => {
                         <span className="label-text text-xl font-medium">Job Title</span>
                     </label>
                     <label className="input-group">
-                        <input type="text" name="jobTitle" placeholder="job title" className="input input-bordered w-full" />
+                        <input type="text" name="jobTitle" placeholder="job title" defaultValue={jobTitle} className="input input-bordered w-full" />
                     </label>
                 </div>
                 
@@ -65,7 +73,7 @@ const AddJobs = () => {
                         <span className="label-text text-xl font-medium"> Email</span>
                     </label>
                     <label className="input-group">
-                        <input type="email" name="email" placeholder="email" defaultValue={user?.email} className="input input-bordered w-full" />
+                        <input type="email" name="email" placeholder="email" defaultValue={user?.email} readOnly className="input input-bordered w-full" />
                     </label>
                 </div>
 
@@ -78,7 +86,7 @@ const AddJobs = () => {
                         <span className="label-text text-xl font-medium"> Minimum Price</span>
                     </label>
                     <label className="input-group">
-                        <input type="text" name="minPrice" placeholder="min-price" className="input input-bordered w-full" />
+                        <input type="text" name="minPrice" placeholder="min-price" defaultValue={minPrice} className="input input-bordered w-full" />
                     </label>
                 </div>
                 
@@ -87,7 +95,7 @@ const AddJobs = () => {
                         <span className="label-text text-xl font-medium"> Maximum price</span>
                     </label>
                     <label className="input-group">
-                        <input type="text" name="maxPrice" placeholder="max-price" className="input input-bordered w-full" />
+                        <input type="text" name="maxPrice" placeholder="max-price" defaultValue={maxPrice} className="input input-bordered w-full" />
                     </label>
                 </div>
 
@@ -100,7 +108,7 @@ const AddJobs = () => {
                         <span className="label-text text-xl font-medium">Deadline</span>
                     </label>
                     <label className="input-group">
-                        <input type="date" name="deadline"  className="input input-bordered w-full" />
+                        <input type="date" name="deadline" defaultValue={deadline}  className="input input-bordered w-full" />
                     </label>
                 </div>
                 
@@ -124,16 +132,15 @@ const AddJobs = () => {
                         <span className="label-text text-xl font-medium">Short Description</span>
                     </label>
                     <label className="input-group">
-                        <input type="text" name="description" placeholder="description" className="input input-bordered w-full" />
+                        <input type="text" name="description" placeholder="description" defaultValue={description} className="input input-bordered w-full" />
                     </label>
                 </div>
-         <Link  to={'/posted'}>
-         <input type="submit" value="Add Button" className=" py-3 px-4 rounded-lg btn-block bg-blue-900 text-white font-bold mt-6"/>
-         </Link>
-         
+         <input type="submit" value="Update" className=" py-3 px-4 rounded-lg btn-block bg-blue-900 text-white font-bold mt-6"/>
         </form>
     </div>
+
+        </div>
     );
 };
 
-export default AddJobs;
+export default  Update2;

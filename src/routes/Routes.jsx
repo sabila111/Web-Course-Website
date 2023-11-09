@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         {
           path: "/homeTabs/:category",
           element:<HomeTabs></HomeTabs>,
-          loader:({params})=> fetch(`https://sabilas-web-school.vercel.app/jobs/jobs/${params.category}}`)
+          loader:({params})=> fetch(`https://sabilas-web-school.vercel.app/jobs/${params.category}}`)
         },
         {
           path: "/add",
@@ -49,27 +49,27 @@ const router = createBrowserRouter([
         {
           path: "/posted",
           element:<PrivateRoute><PostedJobs></PostedJobs></PrivateRoute>,
-          loader:()=> fetch('https://sabilas-web-school.vercel.app/jobs/jobs')
+          loader:()=> fetch('https://sabilas-web-school.vercel.app/jobs')
         },
         // {
         //   path: "/update/:id",
         //   element:<UpdateJobs></UpdateJobs>,
-        //   loader:({params})=> fetch(`https://sabilas-web-school.vercel.app/jobs/jobs/${params.id}`)
+        //   loader:({params})=> fetch(`https://sabilas-web-school.vercel.app/jobs/${params.id}`)
         // },
         {
           path: "/update2/:id",
           element:<Update2></Update2>,
-          loader:({params})=> fetch(`https://sabilas-web-school.vercel.app/jobs/jobs/${params.id}`)
+          loader:({params})=> fetch(`https://sabilas-web-school.vercel.app/jobs/${params.id}`)
         },
         {
           path: "/jobDetail/:id",
           element:<JobDetail></JobDetail>,
-          loader:({params})=> fetch(`https://sabilas-web-school.vercel.app/jobs/jobs/${params.id}`)
+          loader:({params})=> fetch(`https://sabilas-web-school.vercel.app/jobs/${params.id}`)
         },
         {
           path: "/bids/:id",
           element:<PrivateRoute><MyBids></MyBids></PrivateRoute>,
-          loader:({params})=> fetch(`https://sabilas-web-school.vercel.app/jobs/jobs/${params.id}`)
+          loader:({params})=> fetch(`https://sabilas-web-school.vercel.app/jobs/${params.id}`)
         },
       ],
     },

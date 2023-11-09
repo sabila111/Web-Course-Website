@@ -10,7 +10,7 @@ const HomeTabs = () => {
   // const jobs = useLoaderData()
   // console.log(jobs)
   // const {user}= useContext(AuthContext)
-  const url = `https://sabilas-web-school.vercel.app/jobs/jobs`
+  const url = `https://sabilas-web-school.vercel.app/jobs`
   const [jobs, setJobs]=useState([])
   const [selectedTabs, setSelectedTabs]= useState()
 

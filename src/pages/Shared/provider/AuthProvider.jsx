@@ -39,7 +39,7 @@ useEffect(() => {
          setLoading(false) 
         //  if(currentUser){
         //     const loggedUser = {email: currentUser.email}
-        //     axios.post('https://sabilas-web-school.vercel.app/jobs/jwt',loggedUser, {withCredentials: true})
+        //     axios.post('https://sabilas-web-school.vercel.app/jwt',loggedUser, {withCredentials: true})
         //     .then(res =>{
         //         console.log(res.data)
         //     })

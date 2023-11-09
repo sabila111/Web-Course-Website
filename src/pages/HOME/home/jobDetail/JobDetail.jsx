@@ -24,7 +24,7 @@ const JobDetail = () => {
         console.log(job)
 
         // send data to the server 
-        fetch('https://sabilas-web-school.vercel.app/jobs/bids', {
+        fetch('https://sabilas-web-school.vercel.app/bids', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

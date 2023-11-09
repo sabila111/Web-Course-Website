@@ -19,7 +19,7 @@ const PostedJobsCard = ({job}) => {
         if (result.isConfirmed) {
           
         console.log('delet')
-        fetch(`http://localhost:5000/jobs/${_id}`,{
+        fetch(`https://sabilas-web-school.vercel.app/jobs/jobs/${_id}`,{
             method:'DELETE'
         })
         .then(res=>res.json())

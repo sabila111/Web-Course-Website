@@ -26,7 +26,7 @@ const Update2 = () => {
         console.log(job)
 
         // send data to the server 
-        fetch('http://localhost:5000/jobs',{
+        fetch('https://sabilas-web-school.vercel.app/jobs/jobs',{
             method:'POST',
         headers:{
             'content-type' : 'application/json'

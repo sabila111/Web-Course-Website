@@ -9,8 +9,8 @@ const HomeTabs = () => {
 
   // const jobs = useLoaderData()
   // console.log(jobs)
-  const {user}= useContext(AuthContext)
-  const url = `http://localhost:5000/jobs`
+  // const {user}= useContext(AuthContext)
+  const url = `https://sabilas-web-school.vercel.app/jobs/jobs`
   const [jobs, setJobs]=useState([])
   const [selectedTabs, setSelectedTabs]= useState()
 
@@ -34,7 +34,7 @@ const HomeTabs = () => {
     </TabList>
 
     <TabPanel>
-      <h2>hiii</h2>
+      <h2></h2>
     </TabPanel>
     <TabPanel>
       <h2></h2>

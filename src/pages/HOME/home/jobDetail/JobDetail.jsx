@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../../Shared/provider/AuthProvider";
 import Swal from "sweetalert2";
 
@@ -24,7 +24,7 @@ const JobDetail = () => {
         console.log(job)
 
         // send data to the server 
-        fetch('http://localhost:5000/bids', {
+        fetch('https://sabilas-web-school.vercel.app/jobs/bids', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -107,7 +107,7 @@ const JobDetail = () => {
 
                     </div>
 
-                    <input type="submit" value="Bid on the project" className=" py-3 px-4 rounded-lg btn-block bg-blue-900 text-white font-bold mt-6" />
+                    <Link to={`/bids/${_id}`}><input type="submit" value="Bid on the project" className=" py-3 px-4 rounded-lg btn-block bg-blue-900 text-white font-bold mt-6" /></Link>
                 </form>
             </div>
 

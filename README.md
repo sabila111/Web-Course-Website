@@ -22,7 +22,7 @@ Welcome to the Job Board Web Application! This application allows users to post 
 
 4. **Footer**: The application includes a footer section with relevant links, contact information, and other essential details.
 
-5. **Live Link**: Access the live version of the application by clicking:. 
+5. **Live Link**: Access the live version of the application by clicking:https://web-course-project-4613a.web.app. 
 
 ## Getting Started
 
